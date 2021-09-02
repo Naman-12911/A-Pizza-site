@@ -11,5 +11,6 @@ urlpatterns = [
     path('api-auth/', include('rest_framework.urls')),
     #path('api/',include('integrate.api.urls')),
     path('products/', views.pizza_choiceList),
+    path('pizza-post/', views.pizza_post),
     path('api/pizza/<int:pk>',views.pizza_detail)
 ]

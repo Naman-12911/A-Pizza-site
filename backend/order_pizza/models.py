@@ -8,7 +8,14 @@ class product(models.Model):
     name = models.CharField(max_length=100)
     price = models.IntegerField()
     size = models.CharField(max_length=100)
-    image = models.ImageField()
+    image = models.URLField(max_length=200,)
     timeStamps = models.DateTimeField(default=now, blank=True)
     def __str__(self):
         return self.name
+
+class cart(models.Model):
+    pizza_name = models.CharField(max_length=130)
+    Number_of_pizza = models.IntegerField()
+    Grand_total = models.IntegerField()
+    def __str__(self):
+        return self.pizza_name
